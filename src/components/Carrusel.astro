@@ -1,0 +1,193 @@
+---
+--- 
+<div id="carousel" class="carousel">
+  <!-- Contenedor del carrusel -->
+  <div class="carousel-wrapper">
+      <!-- Item 1 -->
+      <div class="carousel-item active" data-carousel-item>
+          <img src="/thisisfine.jpg" alt="...">
+      </div>
+      <!-- Item 2 -->
+      <div class="carousel-item" data-carousel-item>
+          <img src="/thisisfine.jpg" alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="carousel-item" data-carousel-item>
+          <img src="/thisisfine.jpg" alt="...">
+      </div>
+      <!-- Item 4 -->
+      <div class="carousel-item" data-carousel-item>
+          <img src="/thisisfine.jpg" alt="...">
+      </div>
+      <!-- Item 5 -->
+      <div class="carousel-item" data-carousel-item>
+          <img src="/thisisfine.jpg" alt="...">
+      </div>
+  </div>
+  <!-- Indicadores del carrusel -->
+  <div class="carousel-indicators">
+      <button type="button" data-slide-to="0" class="active"></button>
+      <button type="button" data-slide-to="1"></button>
+      <button type="button" data-slide-to="2"></button>
+      <button type="button" data-slide-to="3"></button>
+      <button type="button" data-slide-to="4"></button>
+  </div>
+  <!-- Controles del carrusel -->
+  <button type="button" class="carousel-control prev" data-carousel-prev>
+      <span>&lt;</span>
+  </button>
+  <button type="button" class="carousel-control next" data-carousel-next>
+      <span>&gt;</span>
+  </button>
+</div>
+
+<style>
+  /* Estilos generales */
+.carousel {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 570px; /* Puedes ajustar la altura según tus necesidades */
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-indicators button.active {
+    background-color: #fff;
+}
+
+/* Controles */
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+.carousel-control span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-control:hover span {
+    color: #fff;
+}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const indicators = document.querySelectorAll('.carousel-indicators button');
+    const prevButton = document.querySelector('[data-carousel-prev]');
+    const nextButton = document.querySelector('[data-carousel-next]');
+    let currentIndex = 0;
+    let slideInterval;
+    const intervalTime = 5000; // Tiempo entre slides en milisegundos
+
+    function showItem(index) {
+        carouselItems[currentIndex].classList.remove('active');
+        indicators[currentIndex].classList.remove('active');
+        currentIndex = index;
+        carouselItems[currentIndex].classList.add('active');
+        indicators[currentIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+        const index = (currentIndex + 1) % carouselItems.length;
+        showItem(index);
+    }
+
+    function startSlideShow() {
+        slideInterval = setInterval(nextSlide, intervalTime);
+    }
+
+    function stopSlideShow() {
+        clearInterval(slideInterval);
+    }
+
+    prevButton.addEventListener('click', function() {
+        stopSlideShow();
+        const index = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+        showItem(index);
+        startSlideShow();
+    });
+
+    nextButton.addEventListener('click', function() {
+        stopSlideShow();
+        nextSlide();
+        startSlideShow();
+    });
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            stopSlideShow();
+            showItem(index);
+            startSlideShow();
+        });
+    });
+
+    // Iniciar el slideshow automático
+    startSlideShow();
+});
+
+</script>
+
