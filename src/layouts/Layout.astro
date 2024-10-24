@@ -14,7 +14,8 @@ import Header from '../components/Header.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="google-site-verification" content="MziGBEXPVxC8B3Tax86xK2E07_yW6CC_nGwJVLVmJyw" />
@@ -29,6 +30,19 @@ import Header from '../components/Header.astro';
 </html>
 
 <style is:global>
+	:root {
+    --color-dark: #08070b;
+    --color-grey: #8f9ba8;
+    --color-ligth: #f2f2f2;
+    --color-primary :#80ffea;
+    --color-secundary:#8aff80;
+		--color-terciary:#ff80bf;
+		--color-quaternary:#9580ff;
+		--color-quintary:#ffff80;
+    --gradient-primary-secundary:linear-gradient(135deg, var(--color-primary) 0%, var(--color-secundary) 100%);
+		--gradient-terciary-quaternary:linear-gradient(135deg, var(--color-terciary) 0%, var(--color-quaternary) 100%);
+		--gradient-quintary-terciary:linear-gradient(135deg, var(--color-quintary) 0%, var(--color-terciary) 100%);
+  }
 	*{
 		margin: 0;
 		padding: 0;
@@ -36,8 +50,9 @@ import Header from '../components/Header.astro';
 	}
 	body {
   font-family: 'IBM Plex Mono', monospace;
-  background-color: #08070b;
-  color: #f2f2f2;
+  background-color: var(--color-dark);
+  color: var(--color-ligth);
+	
 	}
 </style>
 

@@ -1,0 +1,22 @@
+---
+interface Props{
+  text:string;
+  gradient:string;
+}
+const {text,gradient} = Astro.props;
+---
+
+<span class="card__badge" style={`--card-gradient: ${gradient}`}>{text}</span>
+
+<style>
+.card__badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-dark);
+    background: var(--card-gradient);
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+</style>

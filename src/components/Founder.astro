@@ -1,0 +1,44 @@
+---
+interface Props{
+  src:string;
+  alt:string;
+}
+const {src,alt} = Astro.props;
+---
+
+<section class="profile-section">
+  <img src={src} alt={alt} class="profile-image">
+  <p>
+    <slot></slot>
+  </p>
+</section>
+
+<style>
+  .profile-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 350px;
+    float: left; /* Hace que la imagen flote a la izquierda */
+    margin-right: 1rem; /* Añade espacio entre la imagen y el texto */
+    margin-bottom: 1rem;
+    border-radius: 15px; /* Esquinas redondeadas */
+}
+
+p {
+	font-size: 16px;
+  line-height: 32px;
+  color: var(--color-grey);
+}
+p::selection{
+  background-color: var(--color-quintary);
+  color: var(--color-dark);
+}
+img::selection{
+  background-color: var(--color-quintary);
+  color: var(--color-dark);
+}
+</style>

@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-
+import Titlegradient from '../components/Titlegradient.astro';
+import Founder from '../components/Founder.astro';
 ---
 
 <Layout title="Coder & Maker Society | Nosotros">
@@ -9,58 +9,44 @@ import Layout from '../layouts/Layout.astro';
 	<main>
 		<div class="container">
 			<section class="header-title">
-				<h1 class="title">Founders</h1>
+        <Titlegradient text='Founders' gradient='var(--gradient-quintary-terciary)' selection='var(--color-quintary)'/>
 			</section>
 
-			<section class="profile-section">
-				<img src="/thisisfine.jpg" alt="Profile image" class="profile-image">
-				<p>
-						Hey, I'm <strong>Your Name</strong>. I'm the <strong>Founder & CEO</strong> at <strong>Your Company</strong>. I love <strong>dark mode</strong>, open-source, and working on side projects. When I'm not working, I enjoy running, watching movies, and <strong>eating cheese</strong>.
+      <Founder src='/thisisfine.jpg' alt='Founder 1'>
+        Hey, I'm <strong>Founder 1</strong>. I'm the <strong>Founder & CEO</strong> at <strong>Your Company</strong>. I love <strong>dark mode</strong>, open-source, and working on side projects. When I'm not working, I enjoy running, watching movies, and <strong>eating cheese</strong>.
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec dapibus leo. Quisque malesuada elit ut lorem hendrerit, sed tempor sapien congue.
 						Integer vitae est sit amet purus fermentum tincidunt. Morbi luctus lorem orci, et sollicitudin justo volutpat at.
-				</p>
-		</section>
-		
-		<section class="profile-section">
-			<img src="/thisisfine.jpg" alt="Profile image" alt="Profile image" class="profile-image">
-			<p>
-					Hey, I'm <strong>Your Name</strong>. I'm the <strong>Founder & CEO</strong> at <strong>Your Company</strong>. I love <strong>dark mode</strong>, open-source, and working on side projects. When I'm not working, I enjoy running, watching movies, and <strong>eating cheese</strong>.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec dapibus leo. Quisque malesuada elit ut lorem hendrerit, sed tempor sapien congue.
-					Integer vitae est sit amet purus fermentum tincidunt. Morbi luctus lorem orci, et sollicitudin justo volutpat at.
-			</p>
-	</section>
+      </Founder>
+
+      <Founder src='/thisisfine.jpg' alt='Founder 2'>
+        Hey, I'm <strong>Founder 2</strong>. I'm the <strong>Founder & CEO</strong> at <strong>Your Company</strong>. I love <strong>dark mode</strong>, open-source, and working on side projects. When I'm not working, I enjoy running, watching movies, and <strong>eating cheese</strong>.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec dapibus leo. Quisque malesuada elit ut lorem hendrerit, sed tempor sapien congue.
+						Integer vitae est sit amet purus fermentum tincidunt. Morbi luctus lorem orci, et sollicitudin justo volutpat at.
+      </Founder>
+			
 	
-		
-		
 		</div>
 	</main>
 </Layout>
 
 <style>
-	main {
-  background-color:151417;
-  padding: 50px 20px;
+  main {
+    background-color:var(--color-dark);
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 50px 20px;
 }
+
 .container{
   margin: 0px auto;
   max-width: 760px;
   padding: 0px 20px;
-  background-color:#08070b;
+  background-color:var(--color-dark);
 }
-.header-title {
-  text-align: left;
-  background-color: #08070b;
-}
-.header-title .title {
-  font-family: Neuzeit Grotesk Bold, sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 50px;
-  margin: 0 0 20px;
-  color: transparent;
-  background-clip: text;
-  background-image: linear-gradient(135deg, #ffff80 0%, #ff80bf 100%);
-}
+
 
 .profile-section {
     padding: 2rem;
@@ -68,22 +54,13 @@ import Layout from '../layouts/Layout.astro';
     margin: 0 auto;
 }
 
-.profile-image {
-    width: 350px;
-    float: left; /* Hace que la imagen flote a la izquierda */
-    margin-right: 1rem; /* Añade espacio entre la imagen y el texto */
-    margin-bottom: 1rem;
-    border-radius: 15px; /* Esquinas redondeadas */
-}
-
-p {
-		font-size: 16px;
-  	line-height: 32px;
-  	color: #8f9ba8;
-}
 strong{
-  color: #f2f2f2;
+  color: var(--color-ligth);
   font-weight: 500;
+}
+strong::selection{
+  background-color: var(--color-quintary);
+  color: var(--color-dark);
 }
 
 @media (max-width: 768px) {
@@ -92,5 +69,6 @@ strong{
         display: block;
         margin: 0 auto 1rem; /* Centra la imagen y añade espacio debajo */
     }
+
 }
 </style>

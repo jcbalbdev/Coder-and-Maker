@@ -1,148 +1,94 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-
+import Verticalcard from '../components/Verticalcard.astro';
+import Titlegradient from '../components/Titlegradient.astro';
 ---
 
 <Layout title="Coder & Maker Society | Proyectos">
 	
 	<main>
     <div class="container">
-      <section class="header-projects">
-        <h1 class="title">Proyectos Personalizados Para Clientes Únicos</h1>
+    <section class="header-projects">
+
+        <Titlegradient text='Proyectos Personalizados Para Clientes Únicos' gradient='var(--gradient-primary-secundary)' selection='var(--color-primary)'/>
+
         <p class="paragraph">En <strong>Coder & Maker Society</strong> desarrollaremos el proyecto adecuado para ti, así podrás posicionarte en el mercado digital y expandir tu empresa o marca personal.</p>
-      </section>
-      
-      <div class="cards-container">
-        <a href="#" class="card">
-            <img class="card__image" src="/thisisfine.jpg" alt="Título de la tarjeta 1" />
-            <div class="card__content">
-                <h2 class="card__title">SkinClean</h2>
-                <p class="card__text">
-                    Creacion de ecommerce para venta digital
-                </p>
-                <span class="card__badge">Leer más</span>
-            </div>
-        </a>
-        <a href="#" class="card">
-            <img class="card__image" src="/thisisfine.jpg" alt="Título de la tarjeta 2" />
-            <div class="card__content">
-                <h2 class="card__title">Laboratorio Laser</h2>
-                <p class="card__text">
-                    Implementacion de SEO para posicionamiento digital
-                </p>
-                <span class="card__badge">Leer más</span>
-            </div>
-        </a>
-        <a href="#" class="card">
-            <img class="card__image" src="/thisisfine.jpg" alt="Título de la tarjeta 3" />
-            <div class="card__content">
-                <h2 class="card__title">Señor Peludo</h2>
-                <p class="card__text">
-                    Creacion de ecommerce para venta digital
-                </p>
-                <span class="card__badge">Leer más</span>
-            </div>
-        </a>
-        <a href="#" class="card">
-            <img class="card__image" src="/thisisfine.jpg" alt="Título de la tarjeta 4" />
-            <div class="card__content">
-                <h2 class="card__title">TK Distribuidora</h2>
-                <p class="card__text">
-                  Creacion de ecommerce para venta digital
-                </p>
-                <span class="card__badge">Leer más</span>
-            </div>
-        </a>
-        <a href="#" class="card">
-            <img class="card__image" src="/thisisfine.jpg" alt="Título de la tarjeta 5" />
-            <div class="card__content">
-                <h2 class="card__title">Título de la tarjeta 5</h2>
-                <p class="card__text">
-                    Descripción breve de la tarjeta 5.
-                </p>
-                <span class="card__badge">Leer más</span>
-            </div>
-        </a>
-        <a href="#" class="card">
-            <img class="card__image" src="/thisisfine.jpg" alt="Título de la tarjeta 6" />
-            <div class="card__content">
-                <h2 class="card__title">Título de la tarjeta 6</h2>
-                <p class="card__text">
-                    Descripción breve de la tarjeta 6.
-                </p>
-                <span class="card__badge">Leer más</span>
-            </div>
-        </a>
-        <a href="#" class="card">
-            <img class="card__image" src="/thisisfine.jpg" alt="Título de la tarjeta 7" />
-            <div class="card__content">
-                <h2 class="card__title">Título de la tarjeta 7</h2>
-                <p class="card__text">
-                    Descripción breve de la tarjeta 7.
-                </p>
-                <span class="card__badge">Leer más</span>
-            </div>
-        </a>
+    </section>
+    
+    <div class="cards-container">
+        <Verticalcard title='Título de la tarjeta 1' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 1.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+
+        <Verticalcard title='Título de la tarjeta 2' href='#' alt='Título de la tarjeta 2' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 2.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        
+        <Verticalcard title='Título de la tarjeta 3' href='#' alt='Título de la tarjeta 3' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 3.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        
+        <Verticalcard title='Título de la tarjeta 4' href='#' alt='Título de la tarjeta 4' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 4.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        
+        <Verticalcard title='Título de la tarjeta 5' href='#' alt='Título de la tarjeta 5' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 5.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        
+        <Verticalcard title='Título de la tarjeta 6' href='#' alt='Título de la tarjeta 6' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 6.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        
+        <Verticalcard title='Título de la tarjeta 7' href='#' alt='Título de la tarjeta 7' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 7.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        
+
+        <Verticalcard title='Título de la tarjeta 8' href='#' alt='Título de la tarjeta 8' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 8.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+
     </div>
+
     </div>
     
     
 
-  </main>
-  
+</main>
+
 </Layout>
 
 <style>
-	main {
-  
+main {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   padding: 50px 20px;
 }
 .container{
   margin: 0px auto;
   max-width: 760px;
   padding: 0px 20px;
-  background-color:#08070b;
+  background-color:var(--color-dark);
 }
 .header-projects {
   text-align: left;
-  background-color: #08070b;
-}
-
-.header-projects .title {
-  font-family: Neuzeit Grotesk Bold, sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 50px;
-  margin: 0 0 20px;
-  color: transparent;
-  background-clip: text;
-  background-image: linear-gradient(135deg, #80ffea 0%, #8aff80 100%);
+  background-color: var(--color-dark);
 }
 
 .header-projects .paragraph {
   margin: 20px 0;
   font-size: 16px;
   line-height: 32px;
-  color: #8f9ba8;
+  color: var(--color-grey);
   max-width: 700px;
   font-family: Biotif, sans-serif;
 }
 
+.header-projects .paragraph::selection{
+  background-color: var(--color-primary);
+  color: var(--color-ligth);
+}
+
 strong{
-  color: #f2f2f2;
+  color: var(--color-ligth);
   font-weight: 500;
 }
-
-:root {
-    --color-dark: #08070b;
-    --color-parragraph: #8f9ba8;
-    --color-title: #f2f2f2;
-    --color-gray-200: #e5e7eb;
-    --color-blue-700: #1d4ed8;
-    --color-blue-300: rgba(59, 130, 246, 0.5);
+strong::selection{
+  background-color: var(--color-primary);
+  color: var(--color-dark);
 }
-
+.header-projects .paragraph::selection{
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+}
 /* Contenedor de tarjetas */
 .cards-container {
     display: grid;
@@ -155,84 +101,6 @@ strong{
     .cards-container {
         grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
     }
-}
-
-/* Estilos generales de la tarjeta */
-.card {
-    display: block;
-    background-color: var(--color-dark);
-    border: 1px solid var(--color-dark);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-    transition: border-color 0.3s;
-}
-
-/* Pseudo-elemento para el borde degradado */
-.card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 0.5rem;
-    padding: 2px;
-    background: linear-gradient(135deg, #80ffea 0%, #8aff80 100%);
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-/* Mostrar el borde degradado al hacer hover */
-.card:hover::before {
-    opacity: 1;
-}
-
-/* Imagen */
-.card__image {
-    width: 100%;
-    display: block;
-}
-
-/* Contenido */
-.card__content {
-    padding: 1.25rem;
-}
-
-/* Título */
-.card__title {
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: var(--color-title);
-		font-size: 16px;
-  	line-height: 32px;
-		font-family: Biotif, sans-serif;
-}
-
-/* Texto */
-.card__text {
-    margin-bottom: 0.75rem;
-    color: var(--color-parragraph);
-		font-size: 16px;
-  	line-height: 32px;
-		font-family: Biotif, sans-serif;
-}
-
-/* Badge */
-.card__badge {
-    display: inline-block;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--color-dark);
-    background: linear-gradient(135deg, #80ffea 0%, #8aff80 100%);
-    border-radius: 0.25rem;
-    text-decoration: none;
 }
 
 

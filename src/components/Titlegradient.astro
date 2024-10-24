@@ -1,0 +1,29 @@
+---
+interface Props {
+  text:string;
+  gradient:string;
+  selection:string;
+}
+
+const {text,gradient,selection} = Astro.props;
+---
+
+<h1 class="title" style={`--card-gradient: ${gradient};--card-selection:${selection}`}>{text}</h1>
+
+<style>
+  .title {
+  font-family: Neuzeit Grotesk Bold, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 50px;
+  margin: 0 0 20px;
+  color: transparent;
+  background-clip: text;
+  background-image: var(--card-gradient);
+  }
+  .title::selection {
+    background-color: var(--card-selection); /* Color de fondo de la selección */
+    color: var(--color-dark); /* Color del texto cuando está seleccionado */
+  }
+
+</style>
