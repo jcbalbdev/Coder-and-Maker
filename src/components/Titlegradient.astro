@@ -12,11 +12,12 @@ const {text,gradient,selection} = Astro.props;
 
 <style>
   .title {
+  text-align: center;
   font-family: Neuzeit Grotesk Bold, sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 50px;
-  margin: 0 0 20px;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
   color: transparent;
   background-clip: text;
   background-image: var(--card-gradient);
@@ -24,6 +25,18 @@ const {text,gradient,selection} = Astro.props;
   .title::selection {
     background-color: var(--card-selection); /* Color de fondo de la selección */
     color: var(--color-dark); /* Color del texto cuando está seleccionado */
+  }
+  @media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  }
+  @media (min-width: 1024px) {
+  .title {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
   }
 
 </style>

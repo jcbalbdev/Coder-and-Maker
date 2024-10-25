@@ -15,22 +15,25 @@ const {src,alt} = Astro.props;
 
 <style>
   .profile-section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 1200px; /* Limita el ancho en pantallas grandes */
+  margin: 0 auto; /* Centra la sección */
+  padding: 20px;
 }
 
 .profile-image {
-    width: 350px;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Esquinas redondeadas */
     float: left; /* Hace que la imagen flote a la izquierda */
-    margin-right: 1rem; /* Añade espacio entre la imagen y el texto */
-    margin-bottom: 1rem;
-    border-radius: 15px; /* Esquinas redondeadas */
+    margin-right: 20px; /* Añade espacio entre la imagen y el texto */
+    margin-bottom: 20px;
 }
 
 p {
-	font-size: 16px;
-  line-height: 32px;
+	font-size: 1.4rem; 
+  line-height: 1.6;
+  padding: 0 15px;
   color: var(--color-grey);
 }
 p::selection{
@@ -40,5 +43,23 @@ p::selection{
 img::selection{
   background-color: var(--color-quintary);
   color: var(--color-dark);
+}
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .profile-section {
+    text-align: center; /* Centra el contenido en móviles */
+  }
+
+  .profile-image {
+    float: none; /* Quita el float para pantallas pequeñas */
+    max-width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
+    margin: 0 auto 20px auto; /* Centra la imagen y da espacio inferior */
+    display: block;
+  }
+
+  p {
+    font-size: 1.2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
 }
 </style>

@@ -10,28 +10,24 @@ import Titlegradient from '../components/Titlegradient.astro';
     <div class="container">
     <section class="header-projects">
 
-        <Titlegradient text='Proyectos Personalizados Para Clientes Únicos' gradient='var(--gradient-primary-secundary)' selection='var(--color-primary)'/>
+        <Titlegradient text='Proyectos personalizados que transforman marcas' gradient='var(--gradient-primary-secundary)' selection='var(--color-primary)'/>
 
-        <p class="paragraph">En <strong>Coder & Maker Society</strong> desarrollaremos el proyecto adecuado para ti, así podrás posicionarte en el mercado digital y expandir tu empresa o marca personal.</p>
+        <p class="paragraph"><strong>Coder & Maker Society</strong>, transforma ideas en realidades digitales. Cada proyecto que desarrollamos está pensado para resolver necesidades específicas y maximizar el crecimiento de nuestros clientes. Desde el diseño inicial hasta la implementación final, nos aseguramos de que cada detalle cuente.</p>
+        
     </section>
     
     <div class="cards-container">
-        <Verticalcard title='Título de la tarjeta 1' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 1.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        <Verticalcard title='Estrategia de Marketing Integral para E-commerce' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Desarrollamos una estrategia de marketing digital para [nombre del cliente], implementando campañas de SEO, SEM y redes sociales que aumentaron las ventas en un 30%.' textBagde='Ver proyecto' gradient='var(--gradient-primary-secundary)'/>
 
-        <Verticalcard title='Título de la tarjeta 2' href='#' alt='Título de la tarjeta 2' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 2.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        <Verticalcard title='Automatización de Procesos Internos para una Empresa de Logística' href='#' alt='Título de la tarjeta 2' src='/thisisfine.jpg' body='Implementamos un sistema de automatización que optimizó los procesos de seguimiento de envíos, mejorando la eficiencia operativa y reduciendo los costos en un 20%.' textBagde='Ver proyecto' gradient='var(--gradient-primary-secundary)'/>
         
-        <Verticalcard title='Título de la tarjeta 3' href='#' alt='Título de la tarjeta 3' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 3.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        <Verticalcard title='Optimización SEO para una Marca de Moda' href='#' alt='Título de la tarjeta 3' src='/thisisfine.jpg' body='Mejoramos el posicionamiento orgánico de [nombre del cliente] mediante una estrategia SEO, que aumentó el tráfico orgánico en un 40% y las ventas en línea en un 25%' textBagde='Ver proyecto' gradient='var(--gradient-primary-secundary)'/>
         
-        <Verticalcard title='Título de la tarjeta 4' href='#' alt='Título de la tarjeta 4' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 4.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        <Verticalcard title='Consultoría de Transformación Digital para una Empresa Tradicional' href='#' alt='Título de la tarjeta 4' src='/thisisfine.jpg' body='Acompañamos a [nombre del cliente] en su proceso de transformación digital, modernizando su infraestructura tecnológica y capacitando a su equipo en herramientas digitales.' textBagde='Ver proyecto' gradient='var(--gradient-primary-secundary)'/>
         
-        <Verticalcard title='Título de la tarjeta 5' href='#' alt='Título de la tarjeta 5' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 5.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
+        <Verticalcard title='Desarrollo de Tienda Online para una Marca de Alimentos' href='#' alt='Título de la tarjeta 5' src='/thisisfine.jpg' body='Creación de una tienda online para [nombre del cliente], con un diseño atractivo y optimización para móviles, lo que resultó en un incremento del 35% en sus ventas digitales.' textBagde='Ver proyecto' gradient='var(--gradient-primary-secundary)'/>
         
-        <Verticalcard title='Título de la tarjeta 6' href='#' alt='Título de la tarjeta 6' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 6.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
         
-        <Verticalcard title='Título de la tarjeta 7' href='#' alt='Título de la tarjeta 7' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 7.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
-        
-
-        <Verticalcard title='Título de la tarjeta 8' href='#' alt='Título de la tarjeta 8' src='/thisisfine.jpg' body='Descripción breve de la tarjeta 8.' textBagde='Leer más' gradient='var(--gradient-primary-secundary)'/>
 
     </div>
 
@@ -44,37 +40,63 @@ import Titlegradient from '../components/Titlegradient.astro';
 </Layout>
 
 <style>
-main {
+  main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; 
+  text-align: center;
+
+  }
+  @media (min-width: 768px) {
+  main {
+    padding: 60px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 80px 40px;
+  }
+}
+/* main {
   width: 100%;
   height: auto;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   padding: 50px 20px;
-}
+} */
 .container{
-  margin: 0px auto;
-  max-width: 760px;
-  padding: 0px 20px;
+  
   background-color:var(--color-dark);
 }
 .header-projects {
-  text-align: left;
+  padding: 60px 0;
   background-color: var(--color-dark);
 }
 
 .header-projects .paragraph {
-  margin: 20px 0;
-  font-size: 16px;
-  line-height: 32px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 400;
   color: var(--color-grey);
-  max-width: 700px;
   font-family: Biotif, sans-serif;
+  padding: 0 15px;
 }
+@media (min-width: 768px) {
+  .header-projects .paragraph {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 1024px) {
 
-.header-projects .paragraph::selection{
-  background-color: var(--color-primary);
-  color: var(--color-ligth);
+  .header-projects .paragraph {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
 }
 
 strong{

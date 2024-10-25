@@ -9,19 +9,17 @@ import Founder from '../components/Founder.astro';
 	<main>
 		<div class="container">
 			<section class="header-title">
-        <Titlegradient text='Founders' gradient='var(--gradient-quintary-terciary)' selection='var(--color-quintary)'/>
+        <Titlegradient text='El Talento Clave Detrás de Tu Transformación Digital' gradient='var(--gradient-quintary-terciary)' selection='var(--color-quintary)'/>
 			</section>
 
       <Founder src='/thisisfine.jpg' alt='Founder 1'>
-        Hey, I'm <strong>Founder 1</strong>. I'm the <strong>Founder & CEO</strong> at <strong>Your Company</strong>. I love <strong>dark mode</strong>, open-source, and working on side projects. When I'm not working, I enjoy running, watching movies, and <strong>eating cheese</strong>.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec dapibus leo. Quisque malesuada elit ut lorem hendrerit, sed tempor sapien congue.
-						Integer vitae est sit amet purus fermentum tincidunt. Morbi luctus lorem orci, et sollicitudin justo volutpat at.
+          <strong>Arturo – Estratega de Marketing Digital y Ventas</strong>Arturo es un estratega apasionado del marketing digital con más de <strong>[X] años de experiencia</strong> ayudando a empresas a crecer en el mundo digital. Es el experto en <strong>estrategias de ventas y campañas de marketing</strong> en <strong>Coder & Maker Society</strong>, donde trabaja para potenciar la presencia online de nuestros clientes.Su enfoque principal es diseñar . 
       </Founder>
+      
 
       <Founder src='/thisisfine.jpg' alt='Founder 2'>
-        Hey, I'm <strong>Founder 2</strong>. I'm the <strong>Founder & CEO</strong> at <strong>Your Company</strong>. I love <strong>dark mode</strong>, open-source, and working on side projects. When I'm not working, I enjoy running, watching movies, and <strong>eating cheese</strong>.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec dapibus leo. Quisque malesuada elit ut lorem hendrerit, sed tempor sapien congue.
-						Integer vitae est sit amet purus fermentum tincidunt. Morbi luctus lorem orci, et sollicitudin justo volutpat at.
+        <strong>José – Desarrollador Web y Especialista en Automatización</strong><br>
+  Apasionado por la <strong>tecnología</strong> y la <strong>innovación</strong>, José es el encargado de llevar a cabo las soluciones tecnológicas más <strong>avanzadas y personalizadas</strong> para cada cliente. Con una amplia experiencia en el desarrollo de <strong>aplicaciones web</strong> y la implementación de <strong>sistemas automatizados</strong>, su trabajo se enfoca en <strong>optimizar procesos</strong> y crear plataformas que no solo sean visualmente atractivas, sino también <strong>eficientes</strong> y <strong>funcionales</strong>.José ha liderado proyectos en los que la <strong>automatización de tareas</strong> y la <strong>integración de herramientas tecnológicas</strong> han permitido a las empresas <strong>ahorrar tiempo y recursos</strong>, mejorando la <strong>eficiencia operativa</strong> y la <strong>escalabilidad</strong> de sus negocios. Su enfoque siempre está centrado en el <strong>usuario final</strong>, garantizando que cada solución sea <strong>intuitiva</strong> y fácil de usar, mientras maximiza el <strong>rendimiento</strong>.Cuando no está escribiendo código, José está explorando las <strong>últimas tendencias tecnológicas</strong>, siempre buscando formas de implementar <strong>soluciones innovadoras</strong> que impulsen el <strong>crecimiento de las marcas</strong>. Su misión es <strong>transformar digitalmente</strong> cada negocio con <strong>tecnología</strong> que haga la vida más fácil para los clientes y sus equipos.
       </Founder>
 			
 	
@@ -30,28 +28,28 @@ import Founder from '../components/Founder.astro';
 </Layout>
 
 <style>
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; 
+  text-align: center;
+  
+  }
+  @media (min-width: 768px) {
   main {
-    background-color:var(--color-dark);
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    padding: 50px 20px;
+    padding: 60px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 80px 40px;
+  }
 }
 
 .container{
-  margin: 0px auto;
-  max-width: 760px;
-  padding: 0px 20px;
+  
   background-color:var(--color-dark);
-}
-
-
-.profile-section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 strong{
@@ -63,12 +61,5 @@ strong::selection{
   color: var(--color-dark);
 }
 
-@media (max-width: 768px) {
-    .profile-image {
-        float: none; /* Evita el flotado en pantallas pequeñas */
-        display: block;
-        margin: 0 auto 1rem; /* Centra la imagen y añade espacio debajo */
-    }
 
-}
 </style>
