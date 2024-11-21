@@ -6,10 +6,12 @@ interface Props {
 const { title } = Astro.props;
 
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" >
 
 	<head>
 		<meta charset="UTF-8" />
@@ -24,32 +26,52 @@ import Header from '../components/Header.astro';
 		<meta property="og:image" content="/thisisfine.jpg"> <!-- Reemplaza con una URL real de la imagen -->
 		<meta property="og:url" content="https://coderandmakersociety.vercel.app/">
 		<meta property="og:type" content="website">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/Logocms.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="google-site-verification" content="MziGBEXPVxC8B3Tax86xK2E07_yW6CC_nGwJVLVmJyw" />
+		<!-- poppins -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<!-- view transition -->
+		
 		<title>{title}</title>
 	</head>
 
-	<body>
+	<body >
 		<Header></Header>
 		<slot />
+		<Footer></Footer>
 	</body>
 
 </html>
 
 <style is:global>
 	:root {
-    --color-dark: #08070b;
+    /* --color-dark: #08070b; */
+		--color-dark: #08070b;
     --color-grey: #8f9ba8;
     --color-ligth: #f2f2f2;
-    --color-primary :#80ffea;
-    --color-secundary:#8aff80;
-		--color-terciary:#ff80bf;
-		--color-quaternary:#9580ff;
-		--color-quintary:#ffff80;
-    --gradient-primary-secundary:linear-gradient(135deg, var(--color-primary) 0%, var(--color-secundary) 100%);
-		--gradient-terciary-quaternary:linear-gradient(135deg, var(--color-terciary) 0%, var(--color-quaternary) 100%);
-		--gradient-quintary-terciary:linear-gradient(135deg, var(--color-quintary) 0%, var(--color-terciary) 100%);
+    --color-cyan :#80ffea;
+    --color-green:#8aff80;
+		--color-pink:#ff80bf;
+		--color-purple:#9580ff;
+		--color-yellow:#ffff80;
+    --color-red: #ff9580;
+    --color-orange: #ffca80;
+
+	
+    --gradient-cyan-purple:linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
+		--gradient-pink-orange:linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
+		--gradient-green-yellow:linear-gradient(135deg, var(--color-green) 0%, var(--color-yellow) 100%);
+		--gradient-cyan-green:linear-gradient(135deg, var(--color-cyan) 0%, var(--color-green) 100%);
+		--gradient-multicolor: linear-gradient(135deg, 
+    var(--color-purple) 0%, 
+     
+    var(--color-pink) 50%, 
+     
+    var(--color-yellow) 100%);
+
   }
 	*{
 		margin: 0;
@@ -57,10 +79,11 @@ import Header from '../components/Header.astro';
 		box-sizing: border-box;
 	}
 	body {
-  font-family: 'IBM Plex Mono', monospace;
+	font-family: "Poppins", sans-serif;
   background-color: var(--color-dark);
   color: var(--color-ligth);
 	
 	}
+	
 </style>
 

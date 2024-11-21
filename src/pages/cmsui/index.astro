@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Titlegradient from '../../components/Titlegradient.astro';
+import Simplecard from '../../components/Simplecard.astro';
+---
+
+<Layout title="Coder & Maker Society | Proyectos">
+	
+	<main>
+    <div class="container">
+    <section class="header-projects">
+
+        <Titlegradient text='Componentes visuales' gradient='var(--gradient-multicolor)' selection='var(--color-purple)'/>
+
+        <p class="paragraph">Explora nuestra colección de componentes visuales creados por <strong>Coder & Maker Society</strong>. Cada componente está diseñado para brindar soluciones funcionales y estéticas que se adaptan a las necesidades de nuestros clientes. Desde botones interactivos hasta sliders personalizados, nuestros componentes reflejan nuestro compromiso con la creatividad y la usabilidad. Úsalos como inspiración o integralos en tus proyectos para mejorar la experiencia de usuario y optimizar el diseño digital de tu marca.</p>
+        
+        
+    </section>
+    
+    <div class="cards-container">
+        <Simplecard title='Badges' alt='Tarjeta 1' src='/thisisfine.jpg' href='/cmsui/bagdes' body='18 componentes'  gradient='var(--gradient-multicolor)'/>
+
+        <Simplecard title='Buttons' alt='Tarjeta 1' src='/thisisfine.jpg' href='#' body='10 componentes'  gradient='var(--gradient-multicolor)'/>
+        
+        
+        
+        
+
+    </div>
+
+    </div>
+    
+    
+
+</main>
+
+</Layout>
+
+<style>
+  main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; 
+  text-align: center;
+
+  }
+  @media (min-width: 768px) {
+  main {
+    padding: 60px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 80px 40px;
+  }
+}
+/* main {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 50px 20px;
+} */
+.container{
+  padding: 0px;
+  background-color:var(--color-dark);
+}
+.header-projects {
+  padding: 0px;
+  background-color: var(--color-dark);
+}
+
+.header-projects .paragraph {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-grey);
+  /* font-family: Biotif, sans-serif; */
+  font-family: "Poppins", sans-serif;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .header-projects .paragraph {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .header-projects .paragraph {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+}
+
+strong{
+  color: var(--color-ligth);
+  font-weight: 500;
+}
+strong::selection{
+  background-color: var(--color-purple);
+  color: var(--color-dark);
+}
+.header-projects .paragraph::selection{
+  background-color: var(--color-purple);
+  color: var(--color-dark);
+}
+/* Contenedor de tarjetas */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
+    gap: 1rem; /* Espacio entre tarjetas */
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+    }
+}
+
+
+</style>

@@ -13,25 +13,25 @@ import Titlegradient from '../components/Titlegradient.astro';
 		<div class="container">
 
         <section class="header-projects">
-        <Titlegradient text='Soluciones Digitales para Impulsar tu Negocio' gradient='var(--gradient-terciary-quaternary)' selection='var(--color-terciary)'/>
+        <Titlegradient text='Soluciones Digitales para Impulsar tu Negocio' gradient='var(--gradient-cyan-purple)' selection='var(--color-cyan)'/>
         
         <p class="paragraph">En <strong>Coder & Maker Society</strong>, somos expertos en transformación digital y marketing integrado. Ayudamos a las marcas a crecer y adaptarse en el entorno digital con soluciones personalizadas, desde estrategias de marketing y ventas hasta el desarrollo de plataformas web y automatización de procesos. Nuestra combinación de creatividad y tecnología garantiza resultados medibles que posicionan a tu negocio a la vanguardia del mercado.</p>
         </section>
         
         <div class="cards-container">
-        <Verticalcard title='Estrategias de Marketing Digital' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Creamos estrategias digitales personalizadas que maximizan tu visibilidad online, generando tráfico de calidad y aumentando la conversión.' textBagde='Descubre más' gradient='var(--gradient-terciary-quaternary)'/>
+        <Verticalcard title='Estrategias de Marketing Digital' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Creamos estrategias digitales personalizadas que maximizan tu visibilidad online, generando tráfico de calidad y aumentando la conversión.' textBagde='Descubre más' gradient='var(--gradient-cyan-purple)'/>
 
-        <Verticalcard title='Desarrollo de Páginas Web y E-commerce' href='#' alt='Título de la tarjeta 2' src='/thisisfine.jpg' body='Diseñamos y desarrollamos plataformas web optimizadas para mejorar la experiencia del usuario y maximizar las conversiones de tu negocio online.' textBagde='Descubre más' gradient='var(--gradient-terciary-quaternary)'/>
+        <Verticalcard title='Desarrollo de Páginas Web y E-commerce' href='#' alt='Título de la tarjeta 2' src='/thisisfine.jpg' body='Diseñamos y desarrollamos plataformas web optimizadas para mejorar la experiencia del usuario y maximizar las conversiones de tu negocio online.' textBagde='Descubre más' gradient='var(--gradient-cyan-purple)'/>
         
-        <Verticalcard title='Automatización de Procesos' href='#' alt='Título de la tarjeta 3' src='/thisisfine.jpg' body='Implementamos sistemas de automatización que optimizan tus procesos internos, permitiendo ahorrar tiempo y mejorar la eficiencia operativa.' textBagde='Descubre más' gradient='var(--gradient-terciary-quaternary)'/>
+        <Verticalcard title='Automatización de Procesos' href='#' alt='Título de la tarjeta 3' src='/thisisfine.jpg' body='Implementamos sistemas de automatización que optimizan tus procesos internos, permitiendo ahorrar tiempo y mejorar la eficiencia operativa.' textBagde='Descubre más' gradient='var(--gradient-cyan-purple)'/>
         
-        <Verticalcard title='Gestión de Redes Sociales' href='#' alt='Título de la tarjeta 4' src='/thisisfine.jpg' body='Desarrollamos estrategias de redes sociales que aumentan tu engagement y conectan con tu audiencia a través de contenido relevante y atractivo.' textBagde='Descubre más' gradient='var(--gradient-terciary-quaternary)'/>
+        <Verticalcard title='Gestión de Redes Sociales' href='#' alt='Título de la tarjeta 4' src='/thisisfine.jpg' body='Desarrollamos estrategias de redes sociales que aumentan tu engagement y conectan con tu audiencia a través de contenido relevante y atractivo.' textBagde='Descubre más' gradient='var(--gradient-cyan-purple)'/>
         
-        <Verticalcard title='Optimización SEO y SEM' href='#' alt='Título de la tarjeta 5' src='/thisisfine.jpg' body='Mejoramos tu visibilidad en los motores de búsqueda a través de estrategias de SEO y SEM que posicionan tu marca entre los primeros resultados.' textBagde='Descubre más' gradient='var(--gradient-terciary-quaternary)'/>
+        <Verticalcard title='Optimización SEO y SEM' href='#' alt='Título de la tarjeta 5' src='/thisisfine.jpg' body='Mejoramos tu visibilidad en los motores de búsqueda a través de estrategias de SEO y SEM que posicionan tu marca entre los primeros resultados.' textBagde='Descubre más' gradient='var(--gradient-cyan-purple)'/>
         
-        <Verticalcard title='Diseño UX/UI' href='#' alt='Título de la tarjeta 6' src='/thisisfine.jpg' body='Creamos experiencias de usuario intuitivas y atractivas que mejoran la interacción del cliente con tu marca y aumentan las conversiones.' textBagde='Descubre más' gradient='var(--gradient-terciary-quaternary)'/>
+        <Verticalcard title='Diseño UX/UI' href='#' alt='Título de la tarjeta 6' src='/thisisfine.jpg' body='Creamos experiencias de usuario intuitivas y atractivas que mejoran la interacción del cliente con tu marca y aumentan las conversiones.' textBagde='Descubre más' gradient='var(--gradient-cyan-purple)'/>
         
-        <Verticalcard title='Consultoría en Transformación Digital' href='#' alt='Título de la tarjeta 7' src='/thisisfine.jpg' body='Te guiamos en el proceso de digitalización de tu empresa, implementando tecnologías y estrategias que te posicionen a la vanguardia del mercado.' textBagde='Descubre más' gradient='var(--gradient-terciary-quaternary)'/>
+        <Verticalcard title='Consultoría en Transformación Digital' href='#' alt='Título de la tarjeta 7' src='/thisisfine.jpg' body='Te guiamos en el proceso de digitalización de tu empresa, implementando tecnologías y estrategias que te posicionen a la vanguardia del mercado.' textBagde='Descubre más' gradient='var(--gradient-cyan-purple)'/>
         
 
         </div>
@@ -78,7 +78,8 @@ main{
   line-height: 1.6;
   font-weight: 400;
   color: var(--color-grey);
-  font-family: Biotif, sans-serif;
+  /* font-family: Biotif, sans-serif; */
+  font-family: "Poppins", sans-serif;
   padding: 0 15px;
 }
 @media (min-width: 768px) {
@@ -100,11 +101,11 @@ strong{
     font-weight: 500;
 }
 strong::selection{
-  background-color: var(--color-terciary);
+  background-color: var(--color-cyan);
   color: var(--color-dark);
 }
 .header-projects .paragraph::selection{
-  background-color: var(--color-terciary);
+  background-color: var(--color-cyan);
   color: var(--color-dark);
 }
 /* Contenedor de tarjetas */

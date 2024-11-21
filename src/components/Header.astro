@@ -1,14 +1,16 @@
-<header>
+<header >
   <div class="container">
-    <a href="/" class="logo">CMS</a>
+    <a href="/" class="logo">
+      <img class="logo-image" src="/Logocms.svg" alt="logo">
+    </a>
     <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
     <nav class="nav-list">
       <ul>
         <li><a href="/" data-section="inicio" class="inicio-link">INICIO</a></li>
         <li><a href="/proyectos" data-section="proyectos" class="proyectos-link">PROYECTOS</a></li>
         <li><a href="/nosotros" data-section="nosotros"  class="nosotros-link">NOSOTROS</a></li>
-        <li><a href="/contacto" data-section="contacto">CONTACTO</a></li>
-        <li><a href="/contacto" data-section="contacto">CMS[UI]</a></li>
+        <li><a href="/contacto" data-section="contacto" class="contacto-link">CONTACTO</a></li>
+        <li><a href="/cmsui/" data-section="contacto" class="cmsui-link">COMPONENTES UI</a></li>
       </ul>
     </nav>
     <div class="menu-overlay"></div>
@@ -33,14 +35,44 @@ header {
   margin: 0 auto;
   padding: 0 20px;
 }
-
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--color-ligth);
-  text-decoration: none;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px; /* Ancho máximo en pantallas grandes */
+    width: 5vw; /* 20% del ancho de la pantalla en pantallas grandes */
+    
+}
+.logo-image {
+  width: 100%;
+    height: auto;
+    max-height: 55px; /* Limita la altura máxima para evitar que crezca demasiado */
+    object-fit: contain; /* Asegura que el logo se ajuste sin distorsión */
+    
 }
 
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .logo-container {
+      max-width: 150px; /* Limita el ancho máximo en tablets */
+      width: 6vw; /* 25% del ancho de la pantalla en tablets */
+    }
+
+    .logo-image {
+      max-height: 60px; /* Reduce un poco la altura máxima en tablets */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-container {
+      max-width: 100px; /* Limita el ancho máximo en móviles */
+      width: 7vw; /* 30% del ancho de la pantalla en móviles */
+    }
+
+    .logo-image {
+      max-height: 50px; /* Altura máxima aún menor en móviles */
+    }
+  }
 /* Menú lateral (off-canvas) para pantallas pequeñas */
 .nav-list {
   position: fixed;
@@ -97,13 +129,19 @@ header {
   color: var(--color-ligth);
 }
 .nav-list .inicio-link.active{
-  color: var(--color-terciary);
+  color: var(--color-cyan);
 }
 .nav-list .proyectos-link.active{
-  color: var(--color-primary);
+  color: var(--color-pink);
 }
 .nav-list .nosotros-link.active{
-  color: var(--color-quintary);
+  color: var(--color-green);
+}
+.nav-list .contacto-link.active{
+  color: var(--color-cyan);
+}
+.nav-list .cmsui-link.active{
+  color: var(--color-purple);
 }
 /* Botón de menú hamburguesa */
 .menu-toggle {

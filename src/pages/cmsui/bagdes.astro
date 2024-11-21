@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Titlegradient from '../../components/Titlegradient.astro';
+import Bagdeminimalista from '../../components/Bagdeminimalista.astro';
+import Bagdesolido from '../../components/Bagdesolido.astro';
+import Bagdegradient from '../../components/Bagdegradient.astro';
+---
+
+<Layout title="Coder & Maker Society | Proyectos">
+	
+	<main>
+    <div class="container">
+    <section class="header-projects">
+
+        <Titlegradient text='Bagdes' gradient='var(--gradient-multicolor)' selection='var(--color-green)'/>
+
+        <p class="paragraph">Un componente visual compacto y versátil, diseñado para destacar información clave o notificaciones importantes dentro de una interfaz. Perfecto para etiquetar categorías, mostrar conteos o llamar la atención sobre actualizaciones, el badge de <strong>Coder & Maker Society</strong> combina estilo y funcionalidad. Con opciones de personalización en color, forma y tamaño, se adapta a cualquier diseño, brindando una solución eficiente y atractiva para mejorar la interacción del usuario</p>
+        
+        
+        
+    </section>
+    
+    <div class="component-container">
+      <!-- Primera sección Minimalistas con Borde -->
+      <div class="badge-section">
+        <h3 class="component-title">Minimalistas con Borde</h3>
+        <div class="badge-container light-theme">
+          <Bagdeminimalista text='Pink' backgroundColor='var(--color-dark)' colorText='var(--color-pink)' border='var(--color-pink)'/>
+          <Bagdeminimalista text='Red' backgroundColor='var(--color-dark)' colorText='var(--color-red)' border='var(--color-red)'/>
+          <Bagdeminimalista text='Green' backgroundColor='var(--color-dark)' colorText='var(--color-green)' border='var(--color-green)'/>
+          <Bagdeminimalista text='Orange' backgroundColor='var(--color-dark)' colorText='var(--color-orange)' border='var(--color-orange)'/>
+          <Bagdeminimalista text='Yellow' backgroundColor='var(--color-dark)' colorText='var(--color-yellow)' border='var(--color-yellow)'/>
+          <Bagdeminimalista text='Purple' backgroundColor='var(--color-dark)' colorText='var(--color-purple)' border='var(--color-purple)'/>
+          <Bagdeminimalista text='Cyan' backgroundColor='var(--color-dark)' colorText='var(--color-cyan)' border='var(--color-cyan)'/>
+        </div>
+      </div>
+
+      
+    
+      <!-- Segunda sección de badges -->
+      <div class="badge-section">
+        <h3 class="component-title">Color Sólido</h3>
+        <div class="badge-container dark-theme">
+          <Bagdesolido text='Pink' backgroundColor='var(--color-pink)' colorText='var(--color-dark)''/>
+          <Bagdesolido text='Red' backgroundColor='var(--color-red)' colorText='var(--color-dark)''/>
+          <Bagdesolido text='Green' backgroundColor='var(--color-green)' colorText='var(--color-dark)''/>
+          <Bagdesolido text='Orange' backgroundColor='var(--color-orange)' colorText='var(--color-dark)''/>
+          <Bagdesolido text='Yellow' backgroundColor='var(--color-yellow)' colorText='var(--color-dark)''/>
+          <Bagdesolido text='Purple' backgroundColor='var(--color-purple)' colorText='var(--color-dark)''/>
+          <Bagdesolido text='Cyan' backgroundColor='var(--color-cyan)' colorText='var(--color-dark)''/>
+        </div>
+      </div>
+
+      <!-- tercera sección de badges  -->
+      <div class="badge-section">
+              <h3 class="component-title">Degradado</h3>
+              <div class="badge-container gradient-theme">
+                <Bagdegradient text='Cyan-Purple' background='var(--gradient-cyan-purple)' colorText='var(--color-dark)''/>
+                <Bagdegradient text='Pink-Orange' background='var(--gradient-pink-orange)' colorText='var(--color-dark)''/>
+                <Bagdegradient text='Green-Yellow' background='var(--gradient-green-yellow)' colorText='var(--color-dark)''/>
+                <Bagdegradient text='Cyan-green' background='var(--gradient-cyan-green)' colorText='var(--color-dark)''/>
+                <Bagdegradient text='Multicolor' background='var(--gradient-multicolor)' colorText='var(--color-dark)''/>
+              </div>
+      </div>
+    </div>
+    
+    
+
+    </div>
+    
+    
+
+</main>
+
+</Layout>
+
+<style>
+  main{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; 
+  text-align: center;
+
+  }
+  @media (min-width: 768px) {
+  main {
+    padding: 60px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 80px 40px;
+  }
+}
+/* main {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 50px 20px;
+} */
+.container{
+  
+  background-color:var(--color-dark);
+}
+.header-projects {
+  
+  background-color: var(--color-dark);
+}
+
+.header-projects .paragraph {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-grey);
+  font-family: Biotif, sans-serif;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .header-projects .paragraph {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .header-projects .paragraph {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+}
+
+strong{
+  color: var(--color-ligth);
+  font-weight: 500;
+}
+strong::selection{
+  background-color: var(--color-purple);
+  color: var(--color-dark);
+}
+.header-projects .paragraph::selection{
+  background-color: var(--color-purple);
+  color: var(--color-dark);
+}
+/* Contenedor principal */
+.component-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Título de cada sección */
+.component-title {
+  font-size: clamp(1.2rem, 2vw + 1rem, 1.8rem); /* Tamaño responsive */
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: left;
+  color: var(--color-ligth);
+  /* font-family: Biotif, sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilo de cada sección de badges */
+.badge-section {
+  margin-bottom: 20px;
+}
+
+/* Contenedor de badges (tema claro y oscuro) */
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.badge-container.light-theme {
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-ligth);
+}
+
+.badge-container.dark-theme {
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-ligth);
+}
+.badge-container.gradient-theme {
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-ligth);
+}
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .component-title {
+    text-align: center;
+  }
+
+  .badge-container {
+    justify-content: center;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .badge {
+    padding: 8px 16px;
+    margin: 4px;
+  }
+}
+
+</style>
