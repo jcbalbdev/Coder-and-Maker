@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Verticalcard from '../components/Verticalcard.astro';
 import Titlegradient from '../components/Titlegradient.astro';
+
+export const description = "Descubre los proyectos personalizados de Coder & Maker Society. Soluciones digitales innovadoras diseñadas para transformar marcas y maximizar su impacto.";
 ---
 
-<Layout title="Coder & Maker Society | Proyectos">
+<Layout title="Coder & Maker Society | Proyectos" description={description}>
 	
 	<main >
     <div class="container">
@@ -16,20 +18,17 @@ import Titlegradient from '../components/Titlegradient.astro';
         
     </section>
     
-    <div class="cards-container">
-        <Verticalcard title='Estrategia de Marketing Integral para E-commerce' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Desarrollamos una estrategia de marketing digital para [nombre del cliente], implementando campañas de SEO, SEM y redes sociales que aumentaron las ventas en un 30%.' textBagde='Ver proyecto' gradient='var(--gradient-pink-orange)'/>
+    <ul role="list" class="link-card-grid">
+        <Verticalcard title='HabitacionMichi - Albergue' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Transformamos el sitio web de un albergue de gatitos en una experiencia única y escalable.' textBagde='Explora cómo hacemos la diferencia' gradient='var(--gradient-pink-orange)' color='var(--color-pink)'/>
 
-        <Verticalcard title='Automatización de Procesos Internos para una Empresa de Logística' href='#' alt='Título de la tarjeta 2' src='/thisisfine.jpg' body='Implementamos un sistema de automatización que optimizó los procesos de seguimiento de envíos, mejorando la eficiencia operativa y reduciendo los costos en un 20%.' textBagde='Ver proyecto' gradient='var(--gradient-pink-orange)'/>
-        
-        <Verticalcard title='Optimización SEO para una Marca de Moda' href='#' alt='Título de la tarjeta 3' src='/thisisfine.jpg' body='Mejoramos el posicionamiento orgánico de [nombre del cliente] mediante una estrategia SEO, que aumentó el tráfico orgánico en un 40% y las ventas en línea en un 25%' textBagde='Ver proyecto' gradient='var(--gradient-pink-orange)'/>
-        
-        <Verticalcard title='Consultoría de Transformación Digital para una Empresa Tradicional' href='#' alt='Título de la tarjeta 4' src='/thisisfine.jpg' body='Acompañamos a [nombre del cliente] en su proceso de transformación digital, modernizando su infraestructura tecnológica y capacitando a su equipo en herramientas digitales.' textBagde='Ver proyecto' gradient='var(--gradient-pink-orange)'/>
-        
-        <Verticalcard title='Desarrollo de Tienda Online para una Marca de Alimentos' href='#' alt='Título de la tarjeta 5' src='/thisisfine.jpg' body='Creación de una tienda online para [nombre del cliente], con un diseño atractivo y optimización para móviles, lo que resultó en un incremento del 35% en sus ventas digitales.' textBagde='Ver proyecto' gradient='var(--gradient-pink-orange)'/>
-        
-        
+        <Verticalcard title='SkinClean - Laboratorio' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Automatizamos el proceso de generación de acuerdos de confidencialidad con un solo clic' textBagde='Explora cómo hacemos la diferencia' gradient='var(--gradient-pink-orange)' color='var(--color-pink)'/>
 
-    </div>
+        <Verticalcard title='Laser - Laboratorio Serológico' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Diseñamos una web optimizada para potenciar su presencia online y atraer más clientes.' textBagde='Explora cómo hacemos la diferencia' gradient='var(--gradient-pink-orange)' color='var(--color-pink)'/>
+
+        <Verticalcard title='TM - Distribuidora de Empaques' href='#' alt='Título de la tarjeta 1' src='/thisisfine.jpg' body='Creamos una ecommerce personalizada para ventas al por mayor, optimizando sus procesos y ventas' textBagde='Explora cómo hacemos la diferencia' gradient='var(--gradient-pink-orange)' color='var(--color-pink)'/>
+
+
+    </ul>
 
     </div>
     
@@ -112,19 +111,17 @@ strong::selection{
   background-color: var(--color-pink);
   color: var(--color-dark);
 }
-/* Contenedor de tarjetas */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
-    gap: 1rem; /* Espacio entre tarjetas */
+.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+		gap: 1.5rem;
+		padding: 0;
+	}
+/* En pantallas pequeñas (máximo 480px), fuerza a dos columnas */
+@media (max-width: 780px) {
+	.link-card-grid {
+		grid-template-columns: repeat(2, 1fr); /* Dos columnas con tamaños iguales */
+	}
 }
-
-/* Ajuste para pantallas grandes */
-@media (min-width: 768px) {
-    .cards-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
-    }
-}
-
 
 </style>

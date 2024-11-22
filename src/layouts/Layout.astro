@@ -1,9 +1,13 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
 }
 
-const { title } = Astro.props;
+const { title,description, keywords, image, url } = Astro.props;
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -15,7 +19,10 @@ import Footer from '../components/Footer.astro';
 
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="En Coder & Maker Society, ofrecemos soluciones creativas y tecnológicas para transformar tu negocio. Especialistas en marketing digital, desarrollo web, y automatización para impulsar el crecimiento de tu empresa.">
+		<title>{title}</title>
+		<!-- etiquetas meta -->
+		<meta name="description" content={description || "Bienvenido a Coder & Maker Society. Transformamos ideas en realidades digitales mediante soluciones personalizadas de desarrollo web y transformación digital."} />
+		
 		<meta name="keywords" content="transformación digital, marketing integrado, desarrollo web, automatización de procesos, SEO, agencia digital, marketing digital, soluciones tecnológicas, Coder & Maker Society, Lima, crecimiento empresarial">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="robots" content="index, follow">
@@ -26,6 +33,7 @@ import Footer from '../components/Footer.astro';
 		<meta property="og:image" content="/thisisfine.jpg"> <!-- Reemplaza con una URL real de la imagen -->
 		<meta property="og:url" content="https://coderandmakersociety.vercel.app/">
 		<meta property="og:type" content="website">
+
 		<link rel="icon" type="image/svg+xml" href="/Logocms.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="google-site-verification" content="MziGBEXPVxC8B3Tax86xK2E07_yW6CC_nGwJVLVmJyw" />
@@ -33,9 +41,9 @@ import Footer from '../components/Footer.astro';
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-		<!-- view transition -->
 		
-		<title>{title}</title>
+		
+		
 	</head>
 
 	<body >
@@ -61,7 +69,7 @@ import Footer from '../components/Footer.astro';
     --color-orange: #ffca80;
 
 	
-    --gradient-cyan-purple:linear-gradient(135deg, var(--color-cyan) 0%, var(--color-purple) 100%);
+    --gradient-cyan-purple:linear-gradient(135deg, var(--color-purple) 0%, var(--color-cyan) 100%);
 		--gradient-pink-orange:linear-gradient(135deg, var(--color-pink) 0%, var(--color-orange) 100%);
 		--gradient-green-yellow:linear-gradient(135deg, var(--color-green) 0%, var(--color-yellow) 100%);
 		--gradient-cyan-green:linear-gradient(135deg, var(--color-cyan) 0%, var(--color-green) 100%);
@@ -70,9 +78,11 @@ import Footer from '../components/Footer.astro';
      
     var(--color-pink) 50%, 
      
-    var(--color-yellow) 100%);
+    var(--color-yellow) 100%)
+		;
 
   }
+
 	*{
 		margin: 0;
 		padding: 0;
