@@ -6,11 +6,15 @@
     <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
     <nav class="nav-list">
       <ul>
-        <li><a href="/" data-section="inicio" class="inicio-link">INICIO</a></li>
-        <li><a href="/proyectos" data-section="proyectos" class="proyectos-link">PROYECTOS</a></li>
-        <li><a href="/nosotros" data-section="nosotros"  class="nosotros-link">NOSOTROS</a></li>
-        <li><a href="/contacto" data-section="contacto" class="contacto-link">CONTACTO</a></li>
-        <li><a href="/componentes-ui/" data-section="componentes ui" class="cmsui-link">COMPONENTES UI</a></li>
+        <li><a href="/" data-section="inicio" class="inicio-link" data-astro-reload>INICIO</a></li>
+
+        <li><a href="/proyectos" data-section="proyectos" class="proyectos-link" data-astro-reload>PROYECTOS</a></li>
+
+        <li><a href="/nosotros" data-section="nosotros"  class="nosotros-link" data-astro-reload>NOSOTROS</a></li>
+        
+        <li><a href="/componentes-ui/" data-section="componentes ui" class="cmsui-link" data-astro-reload>COMPONENTES UI</a></li>
+
+        <li><a href="#contactocms" data-section="contacto" class="contacto-link" data-astro-reload>CONTACTO</a></li>
       </ul>
     </nav>
     <div class="menu-overlay"></div>
@@ -100,7 +104,7 @@ header {
 .nav-list a {
   color: var(--color-grey);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 0.875rem;
   padding: 15px;
   display: block;
   transition: background-color 0.2s, color 0.2s;
@@ -137,18 +141,23 @@ header {
 .nav-list .nosotros-link.active{
   color: var(--color-green);
 }
-.nav-list .contacto-link.active{
-  color: var(--color-cyan);
-}
+
 .nav-list .cmsui-link.active{
   color: var(--color-purple);
+}
+
+.nav-list .contacto-link{
+  color:var(--color-dark);
+  background-color: var(--color-cyan);
+  border-radius: 0.5rem;
+  font-weight: 600;
 }
 /* Botón de menú hamburguesa */
 .menu-toggle {
   display: block;
   background-color: transparent;
   border: none;
-  font-size: 30px;
+  font-size: 2rem;
   color: var(--color-ligth);
   cursor: pointer;
   z-index: 1001; /* Asegura que el botón esté por encima del menú */
@@ -202,7 +211,7 @@ header {
   }
 
   .nav-list a {
-    font-size: 14px;
+    font-size: 1rem;
     padding: 10px 15px;
     display: inline-block;
   }

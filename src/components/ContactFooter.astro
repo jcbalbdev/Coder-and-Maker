@@ -1,0 +1,197 @@
+---
+interface Props {
+  email?: string; // Correo electrónico de contacto
+  phone?: string; // Número de teléfono de contacto
+}
+
+const { email = "coderandmaker@gmail.com", phone = "314 159 281" } = Astro.props;
+
+import Titlegradient from '../components/Titlegradient.astro';
+---
+
+<!-- Componente Footer -->
+<footer class="footer" id="contactocms">
+  <!-- Texto de contacto -->
+  <div class="footer-contact">
+    <Titlegradient text='Contacto' gradient='var(--gradient-cyan-green)' selection='var(--color-cyan)'/>
+    <p class="footer-email">{email}</p>
+    <p class="footer-email">{phone}</p>
+  </div>
+
+  <!-- Formulario de contacto -->
+  <form class="footer-form">
+    <!-- Nombre -->
+    <input
+      type="text"
+      placeholder="NOMBRE"
+      class="footer-input"
+    />
+
+    <!-- Email -->
+    <input
+      type="email"
+      placeholder="E-MAIL"
+      class="footer-input"
+    />
+
+    <!-- Mensaje -->
+    <textarea
+      placeholder="TU MENSAJE"
+      rows="4"
+      class="footer-textarea"
+    ></textarea>
+
+    <!-- Botón de envío -->
+    <button
+      type="submit"
+      class="footer-button"
+    >
+      ENVIAR
+    </button>
+  </form>
+
+  <!-- Redes sociales -->
+  <div class="footer-socials">
+    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+  </div>
+
+  <!-- Copyright -->
+  <p class="footer-copyright">
+    © 2024, Coder and Maker Society
+  </p>
+</footer>
+
+<style>
+  /* Estilos generales del footer */
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 1.5rem;
+}
+
+/* Sección de contacto */
+.footer-contact {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-description {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-email {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+
+/* Formulario */
+.footer-form {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-textarea {
+    grid-column: span 2;
+  }
+
+  .footer-button {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-input,
+  .footer-textarea {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .footer-button {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+}
+
+.footer-input,
+.footer-textarea {
+  border: 1px solid var(--color-grey);
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  color: var(--color-light);
+  font-size: 0.875rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-input::placeholder,
+.footer-textarea::placeholder {
+  color: var(--color-light);
+  
+}
+
+.footer-input:focus,
+.footer-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-cyan);
+}
+
+.footer-textarea {
+  resize: none;
+}
+
+.footer-button {
+  background-color: transparent;
+  border: 1px solid var(--color-grey);
+  color: var(--color-light);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-button:hover {
+  background-color: var(--color-cyan);
+  color: var(--color-dark);
+}
+
+/* Redes sociales */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.social-link {
+  color: var(--color-grey);
+  font-size: 1.25rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  color: var(--color-cyan);
+}
+
+/* Copyright */
+.footer-copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--color-grey);
+  margin-top: 1.5rem;
+}
+</style>
