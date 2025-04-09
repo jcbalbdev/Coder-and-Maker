@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Layoutproyecto from "../../components/Layoutproyecto.astro";
+/* import Footer from '../components/Footer.astro'; */
+
+
+export const description = "Bienvenido a Coder & Maker Society. Transformamos ideas en realidades digitales mediante soluciones personalizadas de desarrollo web , marketing y automatizacion de procesos.";
+---
+
+<Layout title="Coder & Maker Society" description={description}>
+	<main>
+
+		<Layoutproyecto></Layoutproyecto>
+		
+
+		<!-- <div class="container">
+
+     <section class="header-projects">
+        <Titlegradient text='Soluciones Digitales para Impulsar tu Negocio' gradient='var(--gradient-cyan-purple)' selection='var(--color-cyan)'/>
+        
+        <p class="paragraph">En <strong>Coder & Maker Society</strong>, somos expertos en transformación digital y marketing integrado. Ayudamos a las marcas a crecer y adaptarse en el entorno digital con soluciones personalizadas, desde estrategias de marketing y ventas hasta el desarrollo de plataformas web y automatización de procesos. Nuestra combinación de creatividad y tecnología garantiza resultados medibles que posicionan a tu negocio a la vanguardia del mercado.</p>
+        </section>
+        
+        <ul role="list" class="link-card-grid">
+        <Verticalcard title='Estrategias de Marketing Digital' href='#' alt='Título de la tarjeta 1' src='/imgdosauno.svg' body='Impulsamos tu marca con estrategias digitales personalizadas que maximizan tu visibilidad y generan resultados reales.' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+
+        <Verticalcard title='Diseño de Landing Pages' href='#' alt='Título de la tarjeta 2' src='/imgdosauno.svg' body='Creamos páginas de alto impacto diseñadas para convertir visitantes en clientes y alcanzar tus objetivos de negocio.' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+        <Verticalcard title='Diseño y Desarrollo de E-commerce' href='#' alt='Título de la tarjeta 4' src='/imgdosauno.svg' body='Construimos tiendas online optimizadas para ofrecer experiencias de compra únicas y maximizar tus ventas.' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+        <Verticalcard title='Desarrollo Web' href='#' alt='Título de la tarjeta 3' src='/imgdosauno.svg' body='Diseñamos sitios web personalizados, funcionales y escalables que reflejan la esencia de tu marca.' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+        
+        
+        
+        <Verticalcard title='Automatización de Procesos' href='#' alt='Título de la tarjeta 5' src='/imgdosauno.svg' body='Digitalizamos y optimizamos tus procesos internos para ahorrar tiempo y aumentar la eficiencia operativa.' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+        
+        <Verticalcard title='Gestión de Redes Sociales' href='#' alt='Título de la tarjeta 6' src='/imgdosauno.svg' body='Llevamos tu marca a otro nivel con estrategias creativas que conectan y fidelizan a tu audiencia.' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+        
+        <Verticalcard title='Estrategias de SEO y SEM' href='#' alt='Título de la tarjeta 7' src='/imgdosauno.svg' body='Aumentamos tu visibilidad online y dirigimos tráfico de calidad hacia tu sitio web con estrategias de búsqueda efectivas.' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+        <Verticalcard title='Diseño UX/UI' href='#' alt='Título de la tarjeta 7' src='/imgdosauno.svg' body='Creamos experiencias digitales intuitivas y atractivas que cautivan a los usuarios y potencian tu marca' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+        <Verticalcard title='Consultoría en Transformación Digital' href='#' alt='Título de la tarjeta 7' src='/imgdosauno.svg' body='Te guiamos en la adopción de tecnología y estrategias digitales para transformar tu negocio y hacerlo competitivo en el mundo digital.' textBagde='Mas Informacion' gradient='var(--gradient-cyan-purple)' color='var(--color-cyan)'/>
+        
+
+        </ul> 
+
+    </div> -->
+	</main>
+</Layout>
+
+<style>
+main{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; 
+  text-align: center;
+  padding: 40px 20px;
+  }
+  @media (min-width: 768px) {
+    .container {
+    padding: 60px 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+    .container {
+    padding: 80px 40px;
+  }
+}
+.header-projects {
+    padding: 3.75rem 0;
+    background-color: var(--color-dark);
+}
+
+.header-projects .paragraph {
+  text-align: center;
+  margin-bottom: 1.56rem;
+  font-size: 0.875rem;
+  line-height: 1.6rem;
+  font-weight: 300;
+  color: var(--color-grey);
+  /* font-family: Biotif, sans-serif; */
+  font-family: "Poppins", sans-serif;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .header-projects .paragraph {
+    font-size: 1.125rem;
+    line-height: 1.9rem;
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .header-projects .paragraph {
+    font-size: 1.25rem;
+    line-height: 2.1rem;
+    margin-bottom: 40px;
+  }
+}
+
+strong{
+    color: var(--color-ligth);
+    font-weight: 500;
+}
+strong::selection{
+  background-color: var(--color-cyan);
+  color: var(--color-dark);
+}
+.header-projects .paragraph::selection{
+  background-color: var(--color-cyan);
+  color: var(--color-dark);
+}
+/* Grilla actualizada para pantallas más pequeñas */
+.link-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+	gap: 1.5rem;
+	padding: 0;
+}
+
+/* Ajuste de la grilla en pantallas pequeñas */
+@media (max-width: 780px) {
+	.link-card-grid {
+		grid-template-columns: repeat(2, 1fr); /* Dos columnas con tamaños iguales */
+		gap: 1rem;
+	}
+}
+
+/* Ajuste de la grilla en pantallas muy pequeñas */
+@media (max-width: 480px) {
+	.link-card-grid {
+		grid-template-columns: 1fr; /* Una sola columna */
+		gap: 0.5rem;
+	}
+}
+
+
+</style>

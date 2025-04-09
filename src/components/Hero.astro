@@ -1,0 +1,48 @@
+---
+import Buttoncontactanos from "./Buttoncontactanos.astro";
+import Stickers from "./Stickers.astro";
+---
+
+<section class="bg-petroleo-claro text-white py-16 px-4 md:px-8 lg:px-16">
+  <div class="max-w-6xl mx-auto flex flex-col items-center gap-4 relative">
+
+    <!-- TÍTULO -->
+    <div class="order-1 text-left">
+      <h1 class="text-[64px] md:text-[104px] leading-none font-bold">
+        <span class="inline-block relative md:right-36">/ acciona</span>
+        <br>
+        <span class="inline-block relative  md:left-36">
+          <span class="inline-block rotate-[-12deg] text-[32px] md:text-[104px]">en</span>
+          <span class="inline-block rotate-[10deg] text-[32px] md:text-[104px]">digital &gt;</span>
+        </span>
+      </h1>
+    </div>
+
+    <!-- ETIQUETAS COLORIDAS -->
+    <div class="order-2 relative w-full h-[250px] flex items-center justify-center">
+      <div class="absolute left-[16rem] top-8 z-10">
+        <Stickers 
+          text="Somos" 
+          background="#833bf4" 
+          colorText="#00303C" 
+          rotation="-10deg"
+        />
+      </div>
+
+      <div class="absolute left-[30rem] top-20 z-0">
+        <Stickers 
+          text="#experiencia" 
+          background="#75f751" 
+          colorText="#00303C" 
+          rotation="4deg"
+        />
+      </div>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="order-3 w-full flex justify-end gap-4">
+      <Buttoncontactanos />
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,236 @@
+---
+
+---
+
+<div class="proyecto">
+  <h1 class="title-layout-proyecto">Laboratorio Skin Clean</h1>
+  <p class="parragraph-layout-proyecto">Transformamos la gestión de SkinClean con innovación y seguridad.</p>
+
+  <div class="grid-container">
+    <!-- Sección El Reto -->
+    <section class="seccion">
+      <div class="header-tag reto">
+        <span class="squart"></span>
+        
+        <h2>El reto</h2>
+      </div>
+      <div class="contenido">
+        <h3 class="subtitulo">¿Qué necesitaba SkinClean?</h3>
+        <ul class="lista">
+          <li>Un formulario alineado con su identidad visual.</li>
+          <li>Seguridad en la gestión de datos.</li>
+          <li>Automatización para generar documentos al instante.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección La Solución -->
+    <section class="seccion">
+      <div class="header-tag solucion">
+        <span class="squart"></span>
+        
+        <h2>La solución</h2>
+      </div>
+      <div class="contenido">
+        <h3 class="subtitulo">¿Qué hicimos?</h3>
+        <ul class="lista">
+          <li>Vectorizamos su logo y diseñamos un favicon.</li>
+          <li>Creamos un formulario seguro con los colores de la marca.</li>
+          <li>Automatizamos la generación de documentos con Google Sheets y Docs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección El Resultado -->
+    <section class="seccion ">
+      <div class="header-tag resultado">
+        <span class="squart"></span>
+        
+        <h2>El resultado</h2>
+      </div>
+      <div class="contenido-resultado">
+        
+        <div class="grid-resultado">
+          <div class="body-contenido-resultado">
+            <h3 class="subtitulo">El impacto en SkinClean</h3>
+            <ul class="lista">
+              <li>Gestión más rápida y eficiente.</li>
+              <li>Un formulario profesional y seguro.</li>
+              <li>Automatización que ahorra tiempo y mejora procesos.</li>
+            </ul>
+          </div>
+          <div class="imagen-container">
+            <img src="/unoauno.svg" alt="Resultados de SkinClean" class="imagen-resultado" />
+            <div class="estrella">★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+
+  .proyecto {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: "Arista Pro", sans-serif;
+  }
+
+  .title-layout-proyecto{
+    text-align: center;
+    font-size: 4rem;
+    margin: 1rem auto;
+  }
+  .parragraph-layout-proyecto {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 auto 8rem;
+  }
+
+  .grid-container {
+    display: grid;
+    gap: 2.5rem;
+    
+  }
+
+  .seccion {
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 8rem;
+  }
+  .header-tag {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    display: inline-block;
+    color:#00303C;
+    background-color: #F466FF;
+    padding: 2rem 5rem 2rem 4rem;
+    border-radius: 8px;
+    transform: rotate(-10deg);
+    margin-bottom: 4rem;
+    z-index: 1;
+  }
+
+  .header-tag h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    
+  }
+
+  .squart {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom left, #00303C 50%, #fff 50%);
+    border-bottom-left-radius: 8px;
+    top: -0.8px;
+    right: -1.1px;
+  }
+
+  .contenido {
+    display: inline-block;
+    width: 50%;
+    color:#fff;
+    text-align: left;
+    position: absolute;
+    top: -50px;
+    right: -20px;
+  }
+
+  .contenido .subtitulo{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  .contenido .lista{
+    font-size: 1.2rem;
+    
+  }
+  .lista{
+    list-style-type: "✓  "
+  }
+  li{
+    margin-bottom: 1rem;
+  }
+  .contenido-resultado{
+    font-size: 1.2rem;
+    color:#fff;
+   
+   
+  }
+  .contenido-resultado .subtitulo{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    
+  }
+  .body-contenido-resultado{
+    display: inline-block;
+    background-color: #fff;
+    color:#00303C;
+    padding:3.5rem;
+    border-radius:8px;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    transform: rotate(-7deg);
+    z-index: 0;
+    width: 50%;
+  }
+
+  .reto { background: #c450f5; }
+  .solucion { background: #63e32e; }
+  .resultado { background: #ff61c0; }
+
+  .grid-resultado {
+    
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .imagen-container {
+    position: relative;
+    display: inline-block;
+    
+    top: 80px;
+    right: -460px;
+    transform: rotate(9deg);
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .imagen-resultado {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    background-color: #fff;
+    padding:1rem;
+    
+    
+  }
+
+  .estrella {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff61c0;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .grid-resultado {
+      flex-direction: column;
+    }
+    .imagen-resultado {
+      max-width: 100%;
+    }
+  }
+</style>

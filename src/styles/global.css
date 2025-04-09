@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Arista Pro";
+  src: url("/src/assets/fonts/Arista-Pro-Bold-trial.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arista Pro";
+  src: url("/src/assets/fonts/Arista-Pro-Light-trial.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arista Pro";
+  src: url("/src/assets/fonts/Arista-Pro-Fat-trial.ttf") format("truetype");
+  font-weight: 900; /* Fat */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arista Pro Alternate";
+  src: url("/src/assets/fonts/Arista-Pro-Alternate-Bold-trial.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arista Pro Alternate";
+  src: url("/src/assets/fonts/Arista-Pro-Alternate-Light-trial.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arista Pro Alternate";
+  src: url("/src/assets/fonts/Arista-Pro-Alternate-Fat-trial.ttf") format("truetype");
+  font-weight: 900; /* Fat */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/src/assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* Variable weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/src/assets/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* Variable weight */
+  font-style: italic;
+}
+

@@ -1,0 +1,212 @@
+---
+const projects = [
+  { name: "Laboratorio Laser", image: "/unoauno.svg", link: "/proyectos/laboratorio-skinclean", description: "Loaner basan dolor sitio omelo, conectación obligatoria ellas, sed do." },
+  { name: "Habitación Michi", image: "/unoauno.svg", link: "/proyectos/laboratorio-skinclean", description: "Loaner basan dolor sitio omelo, conectación obligatoria ellas, sed do." },
+  { name: "Laboratorio SkinClean", image: "/unoauno.svg", link: "/proyectos/laboratorio-skinclean", description: "Loaner basan dolor sitio omelo, conectación obligatoria ellas, sed do." },
+  { name: "TM Distribuidora", image: "/unoauno.svg", link: "/proyectos/laboratorio-skinclean", description: "Loaner basan dolor sitio omelo, conectación obligatoria ellas, sed do." },
+];
+import Stickers from "./Stickers.astro"
+---
+
+<div id="proyectos" class="box-proyectoscms">
+  <div class="container">
+    <!-- Primera sección -->
+    <div class="services-header">
+      <p class="header-subtitle">- Algunas de nuestras soluciones digitales</p>
+      <div class="header-tag">
+        
+        <span class="circle"></span>
+        <h2>Proyectos</h2>
+      </div>
+    </div>
+  
+    <!-- Segunda sección - Slider -->
+    <div class="slider-container">
+      <div class="slider-track" id="slider">
+        {projects.map((project) => (
+          <div class="slide">
+            <a href={project.link} class="card">
+              <img src={project.image} alt={project.name} />
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  
+</div>
+<style>
+  :root {
+      --rotation-angle: 5deg;
+  }
+  .box-proyectoscms{
+    background-color: #013947;
+    width: 100%;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+      text-align: center;
+  }
+
+  /* Primera sección */
+  .services-header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+  }
+
+  .header-tag {
+    position: relative;
+    display: inline-block;
+    color:#013947;
+    background-color: #75f751;
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    transform: rotate(10deg);
+    margin-left: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .header-tag h2 {
+    margin: 0;
+    font-size: 64px;
+    width: auto;
+    font-weight: bold;
+    line-height: 54px;
+  }
+
+  .circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #00303C;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+  }
+
+  .header-subtitle {
+    display: inline-block;
+    width: 300px;
+    margin-right: 2rem;
+    
+    font-size: 40px;
+  }
+
+  /* Segunda sección */
+  .slider-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+  }
+
+  .slider-track {
+      display: flex;
+      width: max-content;
+      padding: 1.8rem;
+      transition: transform 0.2s ease-out;
+  }
+
+  .slide {
+      display: inline-block;
+      width: 380px;
+      padding: 0;
+      box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.3);
+      transform: rotate(var(--rotation-angle));
+  }
+
+  .slide:nth-child(even) {
+      transform: rotate(calc(-1 * var(--rotation-angle)));
+  }
+
+  .card {
+      display: inline-block;
+      background: #ffffff;
+      color:#00303C;
+      padding: 1.5rem;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+      text-decoration: none;
+  }
+
+  .card:hover {
+      transform: scale(1.05);
+  }
+
+  .card h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+  } 
+
+  .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+  }
+
+  /* Responsivo */
+  @media (max-width: 1024px) {
+      .slide {
+          flex: 0 0 50%;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .slide {
+          flex: 0 0 100%;
+      }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('slider');
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      let offset = 0;
+      const slideWidth = slides[0].offsetWidth;
+      let animationFrame;
+      
+      function moveSlider() {
+          offset -= 1;
+          if (Math.abs(offset) >= slideWidth * totalSlides) {
+              offset = 0;
+          }
+          slider.style.transform = `translateX(${offset}px)`;
+          animationFrame = requestAnimationFrame(moveSlider);
+      }
+
+      function stopSlider() {
+          cancelAnimationFrame(animationFrame);
+      }
+
+      function startSlider() {
+          animationFrame = requestAnimationFrame(moveSlider);
+      }
+
+      // Clonar slides para efecto infinito
+      slides.forEach(slide => {
+          const clone = slide.cloneNode(true);
+          slider.appendChild(clone);
+      });
+
+      // Detener cuando el mouse está sobre el slider
+      slider.addEventListener('mouseenter', stopSlider);
+      slider.addEventListener('mouseleave', startSlider);
+
+      startSlider();
+  });
+</script>
